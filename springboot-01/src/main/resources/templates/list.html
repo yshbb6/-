@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>姓名</th>
+			<th>密码</th>
+			<th>index</th>
+			<th>last</th>
+			<th>first</th>
+			<th>odd</th>
+			<th>even</th>
+			<th>size</th>
+			<th>count</th>
+		</tr>
+		<tr th:each=" i,j : ${data}" style="text-align: center;">
+			<td th:text="${i.u_name}"></td>
+			<td th:text="${i.u_password}"></td>
+			<td th:text="${j.index}"></td>
+			<td th:if="${j.last} == true" th:text="${j.last}"></td>
+			<td th:text="${j.first}"></td>
+			<td th:text="${j.odd}"></td>
+			<td th:text="${j.even}"></td>
+			<td th:text="${j.size}"></td>
+			<td th:text="${j.count}"></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="a">
+		<a th:href="@{/show3(id=1,name=zs)}">百度知道</a>
+		<form th:action="@{/show2}" method="post">
+			<input type="submit" value="提交">
+		</form>
+	</div>
+	
+
+	
+	
+</body>
+</html>

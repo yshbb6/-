@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:include="top::a"></div>
+	<!--赋值：普通文本赋值  -->
+	<span th:text="${msg}"></span>
+	<br>
+	<!--赋值：input标签  -->
+	<input th:value="${msg}" type="text">
+	<br>
+	<!--字符串对象--> 
+	<!-- 长度-->
+	<span th:text="${#strings.length(msg)}"></span>
+	<br>
+	<!-- 包含 -->
+	<span th:text="${#strings.contains(msg,'h')}"></span>
+	<br>
+	<!--以什么开始  -->
+	<span th:text="${#strings.startsWith(msg,'w')}"></span>
+	<br>
+	<!--判断 th:if  -->
+	<span th:if="${msg} != ' '">
+		男
+	</span>
+	<br>
+	<!--switch  -->
+	<!-- <span th:switch="${msg}">
+	</span> -->
+</body>
+</html>
